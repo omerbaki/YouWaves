@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastAnalysisRunner", "ForecastAnalysisRunner\ForecastAnalysisRunner.csproj", "{7B884516-04FD-4315-9824-0143D3FF151C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForecastAnalysis", "ForecastAnalysis", "{A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B884516-04FD-4315-9824-0143D3FF151C} = {A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}
 	EndGlobalSection
 EndGlobal
