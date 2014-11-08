@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastAnalysisRunner", "F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForecastAnalysis", "ForecastAnalysis", "{A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WaveAnalyzer", "WaveAnalyzer", "{C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindAlertImageAnalyzer", "LevYamImageAnalyzer\WindAlertImageAnalyzer.csproj", "{5B8EC848-D47B-4F84-8792-137D6D8B3DD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +21,17 @@ Global
 		{7B884516-04FD-4315-9824-0143D3FF151C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B884516-04FD-4315-9824-0143D3FF151C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B884516-04FD-4315-9824-0143D3FF151C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B8EC848-D47B-4F84-8792-137D6D8B3DD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B8EC848-D47B-4F84-8792-137D6D8B3DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B8EC848-D47B-4F84-8792-137D6D8B3DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B8EC848-D47B-4F84-8792-137D6D8B3DD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7B884516-04FD-4315-9824-0143D3FF151C} = {A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}
+		{C52A759F-DBA6-4CFD-B50A-EA87586D0AC5} = {A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}
+		{5B8EC848-D47B-4F84-8792-137D6D8B3DD5} = {C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}
 	EndGlobalSection
 EndGlobal
