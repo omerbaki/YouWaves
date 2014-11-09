@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForecastAnalysis", "Forecas
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WaveAnalyzer", "WaveAnalyzer", "{C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindAlertWaveAnalyzer", "LevYamImageAnalyzer\WindAlertWaveAnalyzer.csproj", "{5B8EC848-D47B-4F84-8792-137D6D8B3DD5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindAlertWaveAnalyzer", "WindAlertWaveAnalyzer\WindAlertWaveAnalyzer.csproj", "{5B8EC848-D47B-4F84-8792-137D6D8B3DD5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindAnalyzers", "WindAnalyzers", "{6D513AA0-AD57-4046-A710-6CE7164E76FC}"
 EndProject

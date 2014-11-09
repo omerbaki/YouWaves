@@ -60,7 +60,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LevYamImageAnalyzer\WindAlertWaveAnalyzer.csproj">
+    <ProjectReference Include="..\WindAlertWaveAnalyzer\WindAlertWaveAnalyzer.csproj">
       <Project>{5b8ec848-d47b-4f84-8792-137d6d8b3dd5}</Project>
       <Name>WindAlertWaveAnalyzer</Name>
     </ProjectReference>
