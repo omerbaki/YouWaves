@@ -1,4 +1,4 @@
-﻿using LevYamImageAnalyzer;
+﻿using LevYamWaveAnalyzer;
 using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;

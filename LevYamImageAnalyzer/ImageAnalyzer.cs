@@ -1,13 +1,13 @@
-﻿using LevYamImageAnalyzer.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LevYamWaveAnalyzer.Model;
 
-namespace LevYamImageAnalyzer
+namespace LevYamWaveAnalyzer
 {
     internal interface IImageAnalyzer
     {

@@ -60,9 +60,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LevYamImageAnalyzer\WindAlertImageAnalyzer.csproj">
+    <ProjectReference Include="..\LevYamImageAnalyzer\WindAlertWaveAnalyzer.csproj">
       <Project>{5b8ec848-d47b-4f84-8792-137d6d8b3dd5}</Project>
-      <Name>WindAlertImageAnalyzer</Name>
+      <Name>WindAlertWaveAnalyzer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

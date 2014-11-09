@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastAnalysisRunner", "ForecastAnalysisRunner\ForecastAnalysisRunner.csproj", "{7B884516-04FD-4315-9824-0143D3FF151C}"
 EndProject
@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForecastAnalysis", "Forecas
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WaveAnalyzer", "WaveAnalyzer", "{C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindAlertImageAnalyzer", "LevYamImageAnalyzer\WindAlertImageAnalyzer.csproj", "{5B8EC848-D47B-4F84-8792-137D6D8B3DD5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindAlertWaveAnalyzer", "LevYamImageAnalyzer\WindAlertWaveAnalyzer.csproj", "{5B8EC848-D47B-4F84-8792-137D6D8B3DD5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindAnalyzers", "WindAnalyzers", "{6D513AA0-AD57-4046-A710-6CE7164E76FC}"
 EndProject
@@ -34,7 +34,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{7B884516-04FD-4315-9824-0143D3FF151C} = {A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}
 		{C52A759F-DBA6-4CFD-B50A-EA87586D0AC5} = {A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}
-		{5B8EC848-D47B-4F84-8792-137D6D8B3DD5} = {C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}
 		{6D513AA0-AD57-4046-A710-6CE7164E76FC} = {A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}
+		{5B8EC848-D47B-4F84-8792-137D6D8B3DD5} = {C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}
 	EndGlobalSection
 EndGlobal

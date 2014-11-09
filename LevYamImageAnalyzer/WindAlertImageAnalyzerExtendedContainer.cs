@@ -1,5 +1,5 @@
-﻿using LevYamImageAnalyzer.Ben;
-using LevYamImageAnalyzer.Lev;
+﻿using LevYamWaveAnalyzer.Ben;
+using LevYamWaveAnalyzer.Lev;
 using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LevYamImageAnalyzer
+namespace LevYamWaveAnalyzer
 {
     public class WindAlertImageAnalyzerExtendedContainer : UnityContainerExtension
     {

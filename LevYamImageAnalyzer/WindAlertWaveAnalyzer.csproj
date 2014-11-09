@@ -7,8 +7,8 @@
     <ProjectGuid>{5B8EC848-D47B-4F84-8792-137D6D8B3DD5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LevYamImageAnalyzer</RootNamespace>
-    <AssemblyName>LevYamImageAnalyzer</AssemblyName>
+    <RootNamespace>LevYamWaveAnalyzer</RootNamespace>
+    <AssemblyName>LevYamWaveAnalyzer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

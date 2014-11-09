@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LevYamImageAnalyzer.Ben
+namespace LevYamWaveAnalyzer.Ben
 {
     internal interface IWindAlertBenImageDownloader : IImageDownloader
     {
