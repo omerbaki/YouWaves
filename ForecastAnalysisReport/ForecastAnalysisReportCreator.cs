@@ -1,36 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
+using Framework;
 using LevYamWaveAnalyzer;
 
 namespace ForecastAnalysisReport
 {
     public interface IForecastAnalysisReportCreator
     {
-        void CreateReport();
+        Task CreateReport();
         DateTime LastReportCreatedAt { get; }
     }
 
     class ForecastAnalysisReportCreator : IForecastAnalysisReportCreator
     {
+        private readonly IJsonSerializer mJsonSerializer;
         private readonly IEnumerable<IWaveAnalyzer> mWaveAnalyzers;
         private DateTime mLastReportCreatedAt;
 
-        public ForecastAnalysisReportCreator(IEnumerable<IWaveAnalyzer> aWaveAnalyzers)
+        public ForecastAnalysisReportCreator(
+            IEnumerable<IWaveAnalyzer> aWaveAnalyzers,
+            IJsonSerializer aJsonSerializer)
         {
             mWaveAnalyzers = aWaveAnalyzers;
+            mJsonSerializer = aJsonSerializer;
         }
 
-        public void CreateReport()
+        public async Task CreateReport()
         {
-            //            string reportFileName = GetReportFileName();
-            //
-            //            var analyzersReportsModels = await GetWaveAnalysisReportModel();
-            //            mJsonSerializer.Export(reportFileName, analyzersReportsModels);
-            //
-            //            mLastReportCreatedAt = DateTime.UtcNow;
-        }
+            var reportFileName = GetReportFileName();
 
+            var analyzersReportsModels = await GetWaveAnalysisReportModel();
+            mJsonSerializer.Export(reportFileName, analyzersReportsModels);
+
+            mLastReportCreatedAt = DateTime.UtcNow;
+        }
 
         public DateTime LastReportCreatedAt
         {
@@ -44,25 +49,25 @@ namespace ForecastAnalysisReport
             return reportFileName;
         }
 
-        //        private async Task<WaveAnalysisReportModel> GetWaveAnalysisReportModel()
-        //        {
-        //            var waveAnalysisReportModel = new WaveAnalysisReportModel { CreatedAt = DateTime.Now };
-        //
-        //            foreach (var waveAnalyzer in mWaveAnalyzers)
-        //            {
-        //                try
-        //                {
-        //                    waveAnalysisReportModel.AddWaveAnalyzersReport(
-        //                        waveAnalyzer.GetType().Name,
-        //                        await waveAnalyzer.Analyze());
-        //                }
-        //                catch (Exception ex)
-        //                {
-        //                    //mLogger.Error(ex);
-        //                }
-        //            }
-        //
-        //            return waveAnalysisReportModel;
-        //        }
+        private async Task<WaveAnalysisReportModel> GetWaveAnalysisReportModel()
+        {
+            var waveAnalysisReportModel = new WaveAnalysisReportModel { CreatedAt = DateTime.Now };
+
+            foreach (var waveAnalyzer in mWaveAnalyzers)
+            {
+                try
+                {
+                    waveAnalysisReportModel.AddWaveAnalyzersReport(
+                        waveAnalyzer.GetType().Name,
+                        await waveAnalyzer.Analyze());
+                }
+                catch (Exception ex)
+                {
+                    //mLogger.Error(ex);
+                }
+            }
+
+            return waveAnalysisReportModel;
+        }
     }
 }

@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindAnalyzers", "WindAnalyz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastAnalysisReport", "ForecastAnalysisReport\ForecastAnalysisReport.csproj", "{6E450B02-E4E8-45FB-9CF3-67CABE8B3F3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Framework\Framework.csproj", "{51A6A9CA-9A64-45FB-B649-69B00AEBFA15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6E450B02-E4E8-45FB-9CF3-67CABE8B3F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E450B02-E4E8-45FB-9CF3-67CABE8B3F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E450B02-E4E8-45FB-9CF3-67CABE8B3F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A6A9CA-9A64-45FB-B649-69B00AEBFA15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A6A9CA-9A64-45FB-B649-69B00AEBFA15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A6A9CA-9A64-45FB-B649-69B00AEBFA15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A6A9CA-9A64-45FB-B649-69B00AEBFA15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

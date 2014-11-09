@@ -37,7 +37,7 @@ namespace ForecastAnalysisReport
             {
                 if (!ShouldCreateReport()) return;
 
-                mForecastAnalysisReportCreator.CreateReport();
+                await mForecastAnalysisReportCreator.CreateReport();
             }
             catch (Exception ex)
             {
