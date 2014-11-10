@@ -60,6 +60,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ForecastAnalysisReport\ForecastAnalysisReport.csproj">
+      <Project>{6e450b02-e4e8-45fb-9cf3-67cabe8b3f3c}</Project>
+      <Name>ForecastAnalysisReport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{51a6a9ca-9a64-45fb-b649-69b00aebfa15}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WindAlertWaveAnalyzer\WindAlertWaveAnalyzer.csproj">
       <Project>{5b8ec848-d47b-4f84-8792-137d6d8b3dd5}</Project>
       <Name>WindAlertWaveAnalyzer</Name>

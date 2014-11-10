@@ -1,4 +1,6 @@
-﻿using LevYamWaveAnalyzer;
+﻿using ForecastAnalysisReport;
+using Framework;
+using LevYamWaveAnalyzer;
 using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;
@@ -14,7 +16,9 @@ namespace ForecastAnalysisRunner
         {
             IUnityContainer container = new UnityContainer();
 
+            container.AddNewExtension<FrameworkExtendedContainer>();
             container.AddNewExtension<WindAlertImageAnalyzerExtendedContainer>();
+            container.AddNewExtension<ForecastAnalysisReportExtendedContainer>();
 
             container.RegisterType<IForecastAnalysisRunner, ForecastAnalysisRunner>();
 

@@ -32,7 +32,7 @@ namespace ForecastAnalysisReport
             var reportFileName = GetReportFileName();
 
             var analyzersReportsModels = await GetWaveAnalysisReportModel();
-            mJsonSerializer.Export(reportFileName, analyzersReportsModels);
+            await mJsonSerializer.Export(reportFileName, analyzersReportsModels);
 
             mLastReportCreatedAt = DateTime.UtcNow;
         }
@@ -44,7 +44,14 @@ namespace ForecastAnalysisReport
 
         private string GetReportFileName()
         {
-            string reportFileName = Path.Combine(DateTime.Now.ToString("yyyyMMdd_HHmm"), ".json");
+            string reportFileName = DateTime.Now.ToString("yyyyMMdd_HHmm") + ".json";
+            string directory = DateTime.Now.ToString("yyyyMMdd");
+
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
             reportFileName = Path.Combine(DateTime.Now.ToString("yyyyMMdd"), reportFileName);
             return reportFileName;
         }
