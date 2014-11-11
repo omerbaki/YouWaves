@@ -27,7 +27,7 @@ namespace ForecastAnalysisReport
 
         public void Start()
         {
-            var timer = Observable.Interval(TimeSpan.FromSeconds(CREATE_REPORT_INTERVAL_MINUTES));
+            var timer = Observable.Interval(TimeSpan.FromMinutes(CREATE_REPORT_INTERVAL_MINUTES));
             timer.Subscribe(x => Task.FromResult(RunReportScheduler()));
         }
 
