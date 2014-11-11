@@ -4,6 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Framework;
 using LevYamWaveAnalyzer;
+using WaveAnalyzerCommon;
 
 namespace ForecastAnalysisReport
 {

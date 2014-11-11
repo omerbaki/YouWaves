@@ -56,7 +56,6 @@
     <Compile Include="Lev\WindAlertLevImageDownloader.cs" />
     <Compile Include="Lev\WindAlertLevWaveAnalyzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WaveAnalyzerBase.cs" />
     <Compile Include="WindAlertWaveAnalyzerExtendedContainer.cs" />
     <Compile Include="WindAlertImageDownloader.cs" />
   </ItemGroup>

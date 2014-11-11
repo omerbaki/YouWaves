@@ -54,6 +54,7 @@
     <Compile Include="Model\DownloadImageModel.cs" />
     <Compile Include="Model\ImageAnalysisResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WaveAnalyzerBase.cs" />
     <Compile Include="WaveAnalyzerCommonExtendedContainer.cs" />
   </ItemGroup>
   <ItemGroup>

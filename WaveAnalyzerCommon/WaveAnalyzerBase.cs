@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WaveAnalyzerCommon;
 using WaveAnalyzerCommon.Model;
 
-namespace LevYamWaveAnalyzer
+namespace WaveAnalyzerCommon
 {
     public interface IWaveAnalyzer
     {
         Task<float> Analyze();
     }
 
-    internal abstract class WaveAnalyzerBase : IWaveAnalyzer
+    public abstract class WaveAnalyzerBase : IWaveAnalyzer
     {
         private readonly IImageDownloader mImageDownloader;
         private readonly IImageAnalyzer mImageAnalyzer;
