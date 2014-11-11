@@ -14,9 +14,9 @@ namespace ForecastAnalysisReport
 
     class ForecastAnalysisReportScheduler : IForecastAnalysisReportScheduler
     {
-        private const int HOUR_TO_START = 5;
-        private const int HOUR_TO_FINISH = 19;
-        private const int CREATE_REPORT_INTERVAL_MINUTES = 60;
+        private const int HOUR_TO_START = 6;
+        private const int HOUR_TO_FINISH = 17;
+        private const int CREATE_REPORT_INTERVAL_MINUTES = 20;
 
         private readonly IForecastAnalysisReportCreator mForecastAnalysisReportCreator;
 
@@ -27,7 +27,7 @@ namespace ForecastAnalysisReport
 
         public void Start()
         {
-            var timer = Observable.Interval(TimeSpan.FromSeconds(5));
+            var timer = Observable.Interval(TimeSpan.FromMinutes(CREATE_REPORT_INTERVAL_MINUTES));
             timer.Subscribe(x => Task.FromResult(RunReportScheduler()));
         }
 
@@ -35,7 +35,7 @@ namespace ForecastAnalysisReport
         {
             try
             {
-                if (!ShouldCreateReport()) return;
+                if (!IsDaylightTime()) return;
 
                 await mForecastAnalysisReportCreator.CreateReport();
             }
@@ -43,13 +43,6 @@ namespace ForecastAnalysisReport
             {
                 //mLogger.Error(ex);
             }
-        }
-
-        private bool ShouldCreateReport()
-        {
-            return
-                (DateTime.Now - mForecastAnalysisReportCreator.LastReportCreatedAt).TotalMinutes > CREATE_REPORT_INTERVAL_MINUTES &&
-                IsDaylightTime();
         }
 
         private bool IsDaylightTime()

@@ -10,14 +10,12 @@ namespace ForecastAnalysisReport
     public interface IForecastAnalysisReportCreator
     {
         Task CreateReport();
-        DateTime LastReportCreatedAt { get; }
     }
 
     class ForecastAnalysisReportCreator : IForecastAnalysisReportCreator
     {
         private readonly IJsonSerializer mJsonSerializer;
         private readonly IEnumerable<IWaveAnalyzer> mWaveAnalyzers;
-        private DateTime mLastReportCreatedAt;
 
         public ForecastAnalysisReportCreator(
             IEnumerable<IWaveAnalyzer> aWaveAnalyzers,
@@ -33,13 +31,6 @@ namespace ForecastAnalysisReport
 
             var analyzersReportsModels = await GetWaveAnalysisReportModel();
             await mJsonSerializer.Export(reportFileName, analyzersReportsModels);
-
-            mLastReportCreatedAt = DateTime.UtcNow;
-        }
-
-        public DateTime LastReportCreatedAt
-        {
-            get { return mLastReportCreatedAt; }
         }
 
         private string GetReportFileName()
