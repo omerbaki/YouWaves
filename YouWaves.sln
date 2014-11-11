@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastAnalysisReport", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Framework\Framework.csproj", "{51A6A9CA-9A64-45FB-B649-69B00AEBFA15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsramarWaveAnalyzer", "IsramarWaveAnalyzer\IsramarWaveAnalyzer.csproj", "{EADFAF2C-D9B3-430D-85A8-F2DF7A0B367A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{51A6A9CA-9A64-45FB-B649-69B00AEBFA15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51A6A9CA-9A64-45FB-B649-69B00AEBFA15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51A6A9CA-9A64-45FB-B649-69B00AEBFA15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EADFAF2C-D9B3-430D-85A8-F2DF7A0B367A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EADFAF2C-D9B3-430D-85A8-F2DF7A0B367A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EADFAF2C-D9B3-430D-85A8-F2DF7A0B367A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EADFAF2C-D9B3-430D-85A8-F2DF7A0B367A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,5 +55,6 @@ Global
 		{6D513AA0-AD57-4046-A710-6CE7164E76FC} = {A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}
 		{6E450B02-E4E8-45FB-9CF3-67CABE8B3F3C} = {A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}
 		{5B8EC848-D47B-4F84-8792-137D6D8B3DD5} = {C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}
+		{EADFAF2C-D9B3-430D-85A8-F2DF7A0B367A} = {C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}
 	EndGlobalSection
 EndGlobal
