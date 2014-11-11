@@ -53,7 +53,7 @@ namespace WaveAnalyzerCommon
             return relevantArea.Width * relevantArea.Height;
         }
 
-        private static int GetWhitePixelCount(Bitmap bitmap, Rectangle relevantArea)
+        private int GetWhitePixelCount(Bitmap bitmap, Rectangle relevantArea)
         {
             int whitePixelCount = 0;
             for (int x = relevantArea.X; x < relevantArea.Right; x++)
@@ -72,7 +72,7 @@ namespace WaveAnalyzerCommon
             return whitePixelCount;
         }
 
-        private static bool IsWhitePixel(Color color)
+        private bool IsWhitePixel(Color color)
         {
             return color.R > WHITE_PIXEL_COLOR_THRESHOLD && color.G > WHITE_PIXEL_COLOR_THRESHOLD && color.B > WHITE_PIXEL_COLOR_THRESHOLD;
         }
