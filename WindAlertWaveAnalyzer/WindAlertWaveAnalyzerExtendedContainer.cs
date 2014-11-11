@@ -9,13 +9,10 @@ using System.Threading.Tasks;
 
 namespace LevYamWaveAnalyzer
 {
-    public class WindAlertImageAnalyzerExtendedContainer : UnityContainerExtension
+    public class WindAlertWaveAnalyzerExtendedContainer : UnityContainerExtension
     {
         protected override void Initialize()
         {
-            Container.RegisterType<IImageDownloader, ImageDownloader>();
-            Container.RegisterType<IImageAnalyzer, ImageAnalyzer>();
-
             Container.RegisterType<IWindAlertLevImageAnalyzer, WindAlertLevImageAnalyzer>();
             Container.RegisterType<IWindAlertLevImageDownloader, WindAlertLevImageDownloader>();
 

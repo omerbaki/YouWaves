@@ -5,16 +5,16 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using LevYamWaveAnalyzer.Model;
+using WaveAnalyzerCommon.Model;
 
-namespace LevYamWaveAnalyzer
+namespace WaveAnalyzerCommon
 {
-    internal interface IImageDownloader
+    public interface IImageDownloader
     {
         Task<string> DownloadImages();
     }
 
-    internal abstract class ImageDownloader : IImageDownloader
+    public abstract class ImageDownloader : IImageDownloader
     {
         public const string IMAGES_FOLDER = @"Images\{0}\{1}";
 

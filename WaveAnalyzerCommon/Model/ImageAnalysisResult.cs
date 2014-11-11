@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LevYamWaveAnalyzer.Model
+namespace WaveAnalyzerCommon.Model
 {
-    internal class ImageAnalysisResult
+    public class ImageAnalysisResult
     {
         public float WhitePixelAvg { get; set; }
         public float WhitePixelMax { get; set; }

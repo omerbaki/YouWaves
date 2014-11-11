@@ -5,16 +5,16 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LevYamWaveAnalyzer.Model;
+using WaveAnalyzerCommon.Model;
 
-namespace LevYamWaveAnalyzer
+namespace WaveAnalyzerCommon
 {
-    internal interface IImageAnalyzer
+    public interface IImageAnalyzer
     {
         ImageAnalysisResult AnalyzeImages(string aFolderName);
     }
 
-    internal abstract class ImageAnalyzer : IImageAnalyzer
+    public abstract class ImageAnalyzer : IImageAnalyzer
     {
         const double WHITE_PIXEL_COLOR_THRESHOLD = 120;
 
@@ -78,4 +78,3 @@ namespace LevYamWaveAnalyzer
         }
     }
 }
-

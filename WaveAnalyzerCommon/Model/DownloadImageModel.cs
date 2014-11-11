@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LevYamWaveAnalyzer.Model
+namespace WaveAnalyzerCommon.Model
 {
-    internal class DownloadImageModel
+    public class DownloadImageModel
     {
         public string ImageUrl { get; set; }
         public string ImageName { get; set; }

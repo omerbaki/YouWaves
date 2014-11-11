@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastAnalysisReportRunner", "ForecastAnalysisReportRunner\ForecastAnalysisReportRunner.csproj", "{7B884516-04FD-4315-9824-0143D3FF151C}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Framework\Framework.csproj", "{51A6A9CA-9A64-45FB-B649-69B00AEBFA15}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsramarWaveAnalyzer", "IsramarWaveAnalyzer\IsramarWaveAnalyzer.csproj", "{EADFAF2C-D9B3-430D-85A8-F2DF7A0B367A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaveAnalyzerCommon", "WaveAnalyzerCommon\WaveAnalyzerCommon.csproj", "{042D3990-5DB5-46EB-8F85-9D0D4A95FA43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{EADFAF2C-D9B3-430D-85A8-F2DF7A0B367A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EADFAF2C-D9B3-430D-85A8-F2DF7A0B367A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EADFAF2C-D9B3-430D-85A8-F2DF7A0B367A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{042D3990-5DB5-46EB-8F85-9D0D4A95FA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042D3990-5DB5-46EB-8F85-9D0D4A95FA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042D3990-5DB5-46EB-8F85-9D0D4A95FA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042D3990-5DB5-46EB-8F85-9D0D4A95FA43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,9 +58,10 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{7B884516-04FD-4315-9824-0143D3FF151C} = {A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}
 		{C52A759F-DBA6-4CFD-B50A-EA87586D0AC5} = {A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}
+		{5B8EC848-D47B-4F84-8792-137D6D8B3DD5} = {C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}
 		{6D513AA0-AD57-4046-A710-6CE7164E76FC} = {A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}
 		{6E450B02-E4E8-45FB-9CF3-67CABE8B3F3C} = {A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}
-		{5B8EC848-D47B-4F84-8792-137D6D8B3DD5} = {C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}
 		{EADFAF2C-D9B3-430D-85A8-F2DF7A0B367A} = {C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}
+		{042D3990-5DB5-46EB-8F85-9D0D4A95FA43} = {C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}
 	EndGlobalSection
 EndGlobal

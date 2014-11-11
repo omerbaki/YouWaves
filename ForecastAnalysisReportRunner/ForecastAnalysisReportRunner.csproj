@@ -68,6 +68,10 @@
       <Project>{51a6a9ca-9a64-45fb-b649-69b00aebfa15}</Project>
       <Name>Framework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WaveAnalyzerCommon\WaveAnalyzerCommon.csproj">
+      <Project>{042d3990-5db5-46eb-8f85-9d0d4a95fa43}</Project>
+      <Name>WaveAnalyzerCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WindAlertWaveAnalyzer\WindAlertWaveAnalyzer.csproj">
       <Project>{5b8ec848-d47b-4f84-8792-137d6d8b3dd5}</Project>
       <Name>WindAlertWaveAnalyzer</Name>

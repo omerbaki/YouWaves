@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WaveAnalyzerCommon;
 
 namespace ForecastAnalysisRunner
 {
@@ -17,7 +18,8 @@ namespace ForecastAnalysisRunner
             IUnityContainer container = new UnityContainer();
 
             container.AddNewExtension<FrameworkExtendedContainer>();
-            container.AddNewExtension<WindAlertImageAnalyzerExtendedContainer>();
+            container.AddNewExtension<WaveAnalyzerCommonExtendedContainer>();
+            container.AddNewExtension<WindAlertWaveAnalyzerExtendedContainer>();
             container.AddNewExtension<ForecastAnalysisReportExtendedContainer>();
 
             container.RegisterType<IForecastAnalysisRunner, ForecastAnalysisRunner>();
