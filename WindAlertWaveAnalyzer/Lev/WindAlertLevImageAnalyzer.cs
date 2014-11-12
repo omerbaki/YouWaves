@@ -12,11 +12,11 @@ namespace LevYamWaveAnalyzer.Lev
     {
     }
 
-    internal class WindAlertLevImageAnalyzer : ImageAnalyzer, IWindAlertLevImageAnalyzer
+    internal class WindAlertLevImageAnalyzer : WindAlertImageAnalyzer, IWindAlertLevImageAnalyzer
     {
         protected override Rectangle GetRelevantArea()
         {
             return new Rectangle(0, 300, 630, 170);
-        }
+        }        
     }
 }

@@ -25,7 +25,7 @@ namespace ForecastAnalysisRunner
         {
             try
             {
-                mForecastAnalysisReportScheduler.Start();
+                mForecastAnalysisReportScheduler.RunOnce();
             }
             catch(Exception ex)
             {

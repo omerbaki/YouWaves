@@ -10,6 +10,7 @@ namespace ForecastAnalysisReport
     public interface IForecastAnalysisReportScheduler
     {
         void Start();
+        void RunOnce();
     }
 
     class ForecastAnalysisReportScheduler : IForecastAnalysisReportScheduler
@@ -29,6 +30,11 @@ namespace ForecastAnalysisReport
         {
             var timer = Observable.Interval(TimeSpan.FromMinutes(CREATE_REPORT_INTERVAL_MINUTES));
             timer.Subscribe(x => Task.FromResult(RunReportScheduler()));
+        }
+
+        public void RunOnce()
+        {
+            Task.FromResult(RunReportScheduler());
         }
 
         private async Task RunReportScheduler()

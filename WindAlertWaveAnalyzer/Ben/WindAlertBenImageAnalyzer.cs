@@ -12,7 +12,7 @@ namespace LevYamWaveAnalyzer.Ben
     {
     }
 
-    internal class WindAlertBenImageAnalyzer : ImageAnalyzer, IWindAlertBenImageAnalyzer
+    internal class WindAlertBenImageAnalyzer : WindAlertImageAnalyzer, IWindAlertBenImageAnalyzer
     {
         protected override Rectangle GetRelevantArea()
         {

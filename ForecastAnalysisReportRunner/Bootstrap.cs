@@ -1,5 +1,6 @@
 ﻿using ForecastAnalysisReport;
 using Framework;
+using IsramarWaveAnalyzer;
 using LevYamWaveAnalyzer;
 using Microsoft.Practices.Unity;
 using System;
@@ -20,6 +21,7 @@ namespace ForecastAnalysisRunner
             container.AddNewExtension<FrameworkExtendedContainer>();
             container.AddNewExtension<WaveAnalyzerCommonExtendedContainer>();
             container.AddNewExtension<WindAlertWaveAnalyzerExtendedContainer>();
+            container.AddNewExtension<IsramarWaveAnalyzerExtendedContainer>();
             container.AddNewExtension<ForecastAnalysisReportExtendedContainer>();
 
             container.RegisterType<IForecastAnalysisRunner, ForecastAnalysisRunner>();

@@ -16,8 +16,6 @@ namespace WaveAnalyzerCommon
 
     public abstract class ImageAnalyzer : IImageAnalyzer
     {
-        const double WHITE_PIXEL_COLOR_THRESHOLD = 120;
-
         public ImageAnalysisResult AnalyzeImages(string aFolderName)
         {
             var result = new ImageAnalysisResult();
@@ -36,7 +34,7 @@ namespace WaveAnalyzerCommon
                 var relevantArea = GetRelevantArea();
 
                 var totalPixelsCount = GetTotalPixelSize(relevantArea);
-                var whitePixelsCount = GetWhitePixelCount(bitmap, relevantArea);
+                var whitePixelsCount = GetMarkedPixelCount(bitmap, relevantArea);
 
                 float whitePixelsPercentage = (float)whitePixelsCount / totalPixelsCount;
 
@@ -48,33 +46,30 @@ namespace WaveAnalyzerCommon
 
         protected abstract Rectangle GetRelevantArea();
 
+        protected abstract bool ShouldMarkPixel(Color color);
+
         private int GetTotalPixelSize(Rectangle relevantArea)
         {
             return relevantArea.Width * relevantArea.Height;
         }
 
-        private int GetWhitePixelCount(Bitmap bitmap, Rectangle relevantArea)
+        private int GetMarkedPixelCount(Bitmap bitmap, Rectangle relevantArea)
         {
-            int whitePixelCount = 0;
+            int markedPixelCount = 0;
             for (int x = relevantArea.X; x < relevantArea.Right; x++)
             {
                 for (int y = relevantArea.Y; y < relevantArea.Bottom; y++)
                 {
                     // Get the color of a pixel within myBitmap.
                     Color pixelColor = bitmap.GetPixel(x, y);
-                    if (IsWhitePixel(pixelColor))
+                    if (ShouldMarkPixel(pixelColor))
                     {
-                        whitePixelCount++;
+                        markedPixelCount++;
                     }
                 }
             }
 
-            return whitePixelCount;
-        }
-
-        private bool IsWhitePixel(Color color)
-        {
-            return color.R > WHITE_PIXEL_COLOR_THRESHOLD && color.G > WHITE_PIXEL_COLOR_THRESHOLD && color.B > WHITE_PIXEL_COLOR_THRESHOLD;
-        }
+            return markedPixelCount;
+        }       
     }
 }
