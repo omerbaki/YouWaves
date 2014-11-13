@@ -16,7 +16,7 @@ namespace LevYamWaveAnalyzer.Lev
     {
         protected override Rectangle GetRelevantArea()
         {
-            return new Rectangle(0, 300, 630, 170);
+            return new Rectangle(200, 320, 300, 150);
         }        
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WaveAnalyzerCommon;
+using WaveAnalyzerCommon.Model;
 
 namespace IsramarWaveAnalyzer
 {
@@ -30,6 +31,11 @@ namespace IsramarWaveAnalyzer
             }
 
             return true;  
+        }
+
+        protected override ImageAnalysisResult CreateImageAnalysisResult()
+        {
+            return new IsramarImageAnalysisResult();
         }
     }
 }

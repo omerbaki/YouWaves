@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WaveAnalyzerCommon;
+using WaveAnalyzerCommon.Model;
 
 namespace LevYamWaveAnalyzer
 {
@@ -15,6 +16,11 @@ namespace LevYamWaveAnalyzer
         protected override bool ShouldMarkPixel(Color color)
         {
             return color.R > WHITE_PIXEL_COLOR_THRESHOLD && color.G > WHITE_PIXEL_COLOR_THRESHOLD && color.B > WHITE_PIXEL_COLOR_THRESHOLD;
+        }
+
+        protected override ImageAnalysisResult CreateImageAnalysisResult()
+        {
+            return new WindAlertImageAnalysisResult();
         }
     }
 }

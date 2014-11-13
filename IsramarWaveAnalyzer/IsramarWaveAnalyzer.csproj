@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IsramarImageAnalysisResult.cs" />
     <Compile Include="IsramarImageAnalyzer.cs" />
     <Compile Include="IsramarImageDownloader.cs" />
     <Compile Include="IsramarWaveAnalyzer.cs" />

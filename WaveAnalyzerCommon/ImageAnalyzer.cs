@@ -18,27 +18,24 @@ namespace WaveAnalyzerCommon
     {
         public ImageAnalysisResult AnalyzeImages(string aFolderName)
         {
-            var result = new ImageAnalysisResult();
+            var result = CreateImageAnalysisResult();
 
-            string[] imagesPaths = Directory.GetFiles(aFolderName);
+            var imagesPaths = Directory.GetFiles(aFolderName);
 
-            int counter = 0;
-            foreach (string imagePath in imagesPaths)
+            foreach (var imagePath in imagesPaths)
             {
                 if (new FileInfo(imagePath).Length == 0) continue;
-
-                counter++;
 
                 // Create a Bitmap object from an image file.
                 var bitmap = new Bitmap(imagePath);
                 var relevantArea = GetRelevantArea();
 
                 var totalPixelsCount = GetTotalPixelSize(relevantArea);
-                var whitePixelsCount = GetMarkedPixelCount(bitmap, relevantArea);
+                var markedPixelsCount = GetMarkedPixelCount(bitmap, relevantArea);
 
-                float whitePixelsPercentage = (float)whitePixelsCount / totalPixelsCount;
+                var markedPixelsPercentage = (float)markedPixelsCount / totalPixelsCount;
 
-                result.Update(whitePixelsPercentage, counter);
+                result.Update(markedPixelsPercentage, imagePath);
             }
 
             return result;
@@ -47,6 +44,8 @@ namespace WaveAnalyzerCommon
         protected abstract Rectangle GetRelevantArea();
 
         protected abstract bool ShouldMarkPixel(Color color);
+
+        protected abstract ImageAnalysisResult CreateImageAnalysisResult();
 
         private int GetTotalPixelSize(Rectangle relevantArea)
         {
