@@ -5,12 +5,14 @@ using System.Threading.Tasks;
 using Framework;
 using LevYamWaveAnalyzer;
 using WaveAnalyzerCommon;
+using System.Reactive.Linq;
 
 namespace ForecastAnalysisReport
 {
     public interface IForecastAnalysisReportCreator
     {
-        Task CreateReport();
+        void Start();
+        void RunOnce();
     }
 
     class ForecastAnalysisReportCreator : IForecastAnalysisReportCreator
@@ -26,46 +28,55 @@ namespace ForecastAnalysisReport
             mJsonSerializer = aJsonSerializer;
         }
 
-        public async Task CreateReport()
+        public void Start()
         {
-            var reportFileName = GetReportFileName();
-
-            var analyzersReportsModels = await GetWaveAnalysisReportModel();
-            await mJsonSerializer.Export(reportFileName, analyzersReportsModels);
+            var timer = Observable.Interval(TimeSpan.FromMinutes(10));
+            timer.Subscribe(x => RunOnce());
         }
 
-        private string GetReportFileName()
+        public void RunOnce()
         {
-            string reportFileName = DateTime.Now.ToString("yyyyMMdd_HHmm") + ".json";
-            string directory = DateTime.Now.ToString("yyyyMMdd");
-
-            if (!Directory.Exists(directory))
-            {
-                Directory.CreateDirectory(directory);
-            }
-
-            reportFileName = Path.Combine(DateTime.Now.ToString("yyyyMMdd"), reportFileName);
-            return reportFileName;
+            Task.FromResult(CreateReports());
         }
 
-        private async Task<WaveAnalysisReportModel> GetWaveAnalysisReportModel()
+        private async Task CreateReports()
         {
-            var waveAnalysisReportModel = new WaveAnalysisReportModel { CreatedAt = DateTime.Now };
+            string directory = CreateReportDirectory();
 
             foreach (var waveAnalyzer in mWaveAnalyzers)
             {
                 try
                 {
-                    waveAnalysisReportModel.WaveAnalyzersReports.Add(
-                        await waveAnalyzer.Analyze());
+                    if (!waveAnalyzer.ShouldRun()) continue;
+
+                    var waveAnalysisResult = await waveAnalyzer.Analyze();
+
+                    string reportFileName = 
+                        Path.Combine(directory, waveAnalyzer.GetType().Name + "_" + DateTime.Now.ToString("yyyyMMdd_HHmm") + ".json");
+
+                    await mJsonSerializer.Export(reportFileName, waveAnalysisResult);
                 }
                 catch (Exception ex)
                 {
                     //mLogger.Error(ex);
                 }
             }
-
-            return waveAnalysisReportModel;
+            
         }
+
+        private string CreateReportDirectory()
+        {
+            string directory = Path.Combine("Reports", DateTime.Now.ToString("yyyyMMdd"));
+
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            return directory;
+        }
+
+
+        
     }
 }

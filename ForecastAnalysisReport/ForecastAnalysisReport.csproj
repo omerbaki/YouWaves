@@ -62,9 +62,7 @@
   <ItemGroup>
     <Compile Include="ForecastAnalysisReportCreator.cs" />
     <Compile Include="ForecastAnalysisReportExtendedContainer.cs" />
-    <Compile Include="ForecastAnalysisReportScheduler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WaveAnalysisReportModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">

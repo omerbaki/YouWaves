@@ -11,12 +11,15 @@ namespace WaveAnalyzerCommon
     public interface IWaveAnalyzer
     {    
         Task<WaveAnalysisResult> Analyze();
+        bool ShouldRun();
     }
 
     public abstract class WaveAnalyzerBase : IWaveAnalyzer
     {
         private readonly IImageDownloader mImageDownloader;
         private readonly IImageAnalyzer mImageAnalyzer;
+
+        protected DateTime mLastRunTime;
 
         protected WaveAnalyzerBase(IImageDownloader imageDownloader, IImageAnalyzer imageAnalyzer)
         {
@@ -26,6 +29,8 @@ namespace WaveAnalyzerCommon
 
         public async Task<WaveAnalysisResult> Analyze()
         {
+            mLastRunTime = DateTime.Now;
+
             var result = CreateImageAnalysisResult();
 
             string imageFolder = await mImageDownloader.DownloadImages();
@@ -42,5 +47,7 @@ namespace WaveAnalyzerCommon
         }
 
         protected abstract WaveAnalysisResult CreateImageAnalysisResult();
+
+        public abstract bool ShouldRun();
     }
 }

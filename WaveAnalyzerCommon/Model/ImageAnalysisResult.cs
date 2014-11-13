@@ -8,6 +8,14 @@ namespace WaveAnalyzerCommon.Model
 {
     public abstract class WaveAnalysisResult
     {
+        private DateTime mCreatedAt;
+        public WaveAnalysisResult()
+        {
+            mCreatedAt = DateTime.Now;
+        }
+
+        public DateTime CreatedAt { get { return mCreatedAt; } }
+
         public abstract void Update(float markedPixelsPercentage, string imagePath);        
     }
 }

@@ -21,5 +21,10 @@ namespace IsramarWaveAnalyzer
         {
             return new IsramarImageAnalysisResult();
         }
+
+        public override bool ShouldRun()
+        {
+            return (DateTime.Now - mLastRunTime).TotalHours > 24;
+        }
     }
 }

@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsramarWaveAnalyzer", "Isra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaveAnalyzerCommon", "WaveAnalyzerCommon\WaveAnalyzerCommon.csproj", "{042D3990-5DB5-46EB-8F85-9D0D4A95FA43}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForecastNotification", "ForecastNotification", "{F9BB0E50-F149-416C-99E2-4D3EBD56D706}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

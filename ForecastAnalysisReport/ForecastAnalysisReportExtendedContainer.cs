@@ -11,8 +11,7 @@ namespace ForecastAnalysisReport
     {
         protected override void Initialize()
         {
-            Container.RegisterType<IForecastAnalysisReportCreator, ForecastAnalysisReportCreator>();
-            Container.RegisterType<IForecastAnalysisReportScheduler, ForecastAnalysisReportScheduler>();
+            Container.RegisterType<IForecastAnalysisReportCreator, ForecastAnalysisReportCreator>();            
         }
     }
 }

@@ -14,18 +14,18 @@ namespace ForecastAnalysisRunner
 
     class ForecastAnalysisRunner : IForecastAnalysisRunner
     {
-        private IForecastAnalysisReportScheduler mForecastAnalysisReportScheduler;
+        private IForecastAnalysisReportCreator mForecastAnalysisReportCreator;
 
-        public ForecastAnalysisRunner(IForecastAnalysisReportScheduler aForecastAnalysisReportScheduler)
+        public ForecastAnalysisRunner(IForecastAnalysisReportCreator aForecastAnalysisReportCreator)
         {
-            mForecastAnalysisReportScheduler = aForecastAnalysisReportScheduler;
+            mForecastAnalysisReportCreator = aForecastAnalysisReportCreator;
         }
 
         public void Start()
         {
             try
             {
-                mForecastAnalysisReportScheduler.RunOnce();
+                mForecastAnalysisReportCreator.RunOnce();
             }
             catch(Exception ex)
             {
