@@ -56,8 +56,7 @@ namespace ForecastAnalysisReport
             {
                 try
                 {
-                    waveAnalysisReportModel.AddWaveAnalyzersReport(
-                        waveAnalyzer.GetType().Name,
+                    waveAnalysisReportModel.WaveAnalyzersReports.Add(
                         await waveAnalyzer.Analyze());
                 }
                 catch (Exception ex)

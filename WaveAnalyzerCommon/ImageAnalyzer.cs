@@ -11,41 +11,25 @@ namespace WaveAnalyzerCommon
 {
     public interface IImageAnalyzer
     {
-        ImageAnalysisResult AnalyzeImages(string aFolderName);
+        float AnalyzeImage(string imagePath);
     }
 
     public abstract class ImageAnalyzer : IImageAnalyzer
     {
-        public ImageAnalysisResult AnalyzeImages(string aFolderName)
-        {
-            var result = CreateImageAnalysisResult();
+        public float AnalyzeImage(string imagePath)
+        {            
+            var bitmap = new Bitmap(imagePath);
+            var relevantArea = GetRelevantArea();
 
-            var imagesPaths = Directory.GetFiles(aFolderName);
+            var totalPixelsCount = GetTotalPixelSize(relevantArea);
+            var markedPixelsCount = GetMarkedPixelCount(bitmap, relevantArea);
 
-            foreach (var imagePath in imagesPaths)
-            {
-                if (new FileInfo(imagePath).Length == 0) continue;
-
-                // Create a Bitmap object from an image file.
-                var bitmap = new Bitmap(imagePath);
-                var relevantArea = GetRelevantArea();
-
-                var totalPixelsCount = GetTotalPixelSize(relevantArea);
-                var markedPixelsCount = GetMarkedPixelCount(bitmap, relevantArea);
-
-                var markedPixelsPercentage = (float)markedPixelsCount / totalPixelsCount;
-
-                result.Update(markedPixelsPercentage, imagePath);
-            }
-
-            return result;
+            return (float)markedPixelsCount / totalPixelsCount;
         }
 
         protected abstract Rectangle GetRelevantArea();
 
-        protected abstract bool ShouldMarkPixel(Color color);
-
-        protected abstract ImageAnalysisResult CreateImageAnalysisResult();
+        protected abstract bool ShouldMarkPixel(Color color);        
 
         private int GetTotalPixelSize(Rectangle relevantArea)
         {

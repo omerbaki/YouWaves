@@ -7,13 +7,13 @@ using WaveAnalyzerCommon;
 
 namespace LevYamWaveAnalyzer.Lev
 {
-    internal class WindAlertLevWaveAnalyzer : WaveAnalyzerBase
+    internal class WindAlertLevWaveAnalyzer : WindAlertWaveAnalyzerBase
     {
         public WindAlertLevWaveAnalyzer(
             IWindAlertLevImageDownloader imageDownloader,
             IWindAlertLevImageAnalyzer imageAnalyzer)
             : base(imageDownloader, imageAnalyzer)
         {
-        }
+        }        
     }
 }

@@ -7,7 +7,7 @@ using WaveAnalyzerCommon.Model;
 
 namespace LevYamWaveAnalyzer
 {
-    public class WindAlertImageAnalysisResult : ImageAnalysisResult
+    public class WindAlertWaveAnalysisResult : WaveAnalysisResult
     {
         public float MarkedPixelsPercentage { get; set; }
 
@@ -17,12 +17,6 @@ namespace LevYamWaveAnalyzer
             {
                 MarkedPixelsPercentage = markedPixelsPercentage;
             }
-        }
-
-        public override string GetAnalysisSummary()
-        {
-            // TODO: Translate MarkedPixelsPercentage to wave hight maybe
-            return MarkedPixelsPercentage.ToString();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WaveAnalyzerCommon;
+using WaveAnalyzerCommon.Model;
 
 namespace IsramarWaveAnalyzer
 {
@@ -14,6 +15,11 @@ namespace IsramarWaveAnalyzer
             IIsramarImageAnalyzer imageAnalyzer)
             : base(imageDownloader, imageAnalyzer)
         {
+        }
+
+        protected override WaveAnalysisResult CreateImageAnalysisResult()
+        {
+            return new IsramarImageAnalysisResult();
         }
     }
 }

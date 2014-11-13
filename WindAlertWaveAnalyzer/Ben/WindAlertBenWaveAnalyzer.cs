@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WaveAnalyzerCommon;
+using WaveAnalyzerCommon.Model;
 
 namespace LevYamWaveAnalyzer.Ben
 {
-    internal class WindAlertBenWaveAnalyzer : WaveAnalyzerBase
+    internal class WindAlertBenWaveAnalyzer : WindAlertWaveAnalyzerBase
     {
         public WindAlertBenWaveAnalyzer(
             IWindAlertBenImageDownloader imageDownloader,
             IWindAlertBenImageAnalyzer imageAnalyzer)
             : base(imageDownloader, imageAnalyzer)
         {
-        }
+        }       
     }
 }
