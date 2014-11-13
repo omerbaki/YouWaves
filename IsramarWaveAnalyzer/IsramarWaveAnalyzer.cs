@@ -24,7 +24,8 @@ namespace IsramarWaveAnalyzer
 
         public override bool ShouldRun()
         {
-            return (DateTime.Now - mLastRunTime).TotalHours > 24;
+            bool alreadyRanToday = mLastRunTime.Date == DateTime.Today;
+            return (DateTime.Now.Hour == 8) && !alreadyRanToday;
         }
     }
 }
