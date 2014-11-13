@@ -15,7 +15,7 @@ namespace ForecastAnalysisReport
 
         public List<WaveAnalyzerReportModel> WaveAnalyzersReports { get; set; }
 
-        public void AddWaveAnalyzersReport(string waveAnalyzerName, float analysisValue)
+        public void AddWaveAnalyzersReport(string waveAnalyzerName, string analysisValue)
         {
             this.WaveAnalyzersReports.Add(new WaveAnalyzerReportModel()
             {
@@ -30,6 +30,6 @@ namespace ForecastAnalysisReport
     public class WaveAnalyzerReportModel
     {
         public string WaveAnalyzerName { get; set; }
-        public float AnalysisValue { get; set; }
+        public string AnalysisValue { get; set; }
     }
 }

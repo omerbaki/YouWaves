@@ -9,14 +9,20 @@ namespace LevYamWaveAnalyzer
 {
     public class WindAlertImageAnalysisResult : ImageAnalysisResult
     {
-        public float WhitePixelMax { get; set; }
+        public float MarkedPixelsPercentage { get; set; }
 
         public override void Update(float markedPixelsPercentage, string imagePath)
         {
-            if (WhitePixelMax < markedPixelsPercentage)
+            if (MarkedPixelsPercentage < markedPixelsPercentage)
             {
-                WhitePixelMax = markedPixelsPercentage;
+                MarkedPixelsPercentage = markedPixelsPercentage;
             }
+        }
+
+        public override string GetAnalysisSummary()
+        {
+            // TODO: Translate MarkedPixelsPercentage to wave hight maybe
+            return MarkedPixelsPercentage.ToString();
         }
     }
 }

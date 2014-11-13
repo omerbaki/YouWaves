@@ -9,5 +9,6 @@ namespace WaveAnalyzerCommon.Model
     public abstract class ImageAnalysisResult
     {
         public abstract void Update(float markedPixelsPercentage, string imagePath);
+        public abstract string GetAnalysisSummary();
     }
 }

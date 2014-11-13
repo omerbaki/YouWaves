@@ -9,7 +9,7 @@ namespace WaveAnalyzerCommon
 {
     public interface IWaveAnalyzer
     {
-        Task<float> Analyze();
+        Task<string> Analyze();
     }
 
     public abstract class WaveAnalyzerBase : IWaveAnalyzer
@@ -23,11 +23,11 @@ namespace WaveAnalyzerCommon
             mImageAnalyzer = imageAnalyzer;
         }
 
-        public async Task<float> Analyze()
+        public async Task<string> Analyze()
         {
             string imageFolder = await mImageDownloader.DownloadImages();
             ImageAnalysisResult result = mImageAnalyzer.AnalyzeImages(imageFolder);
-            return result.WhitePixelMax;
+            return result.GetAnalysisSummary();
         }
     }
 }
