@@ -11,6 +11,8 @@ namespace Framework
     public interface IJsonSerializer
     {
         Task Export(string fileName, object aObj);
+        Task<object> Import(string fileName);
+
     }
 
     public class JsonSerializer : IJsonSerializer
@@ -18,16 +20,22 @@ namespace Framework
         public async Task Export(string fileName, object aObj)
         {
             string serializedObj = JsonConvert.SerializeObject(aObj);
+
             using (StreamWriter writer = File.CreateText(fileName))
             {
                 await writer.WriteAsync(serializedObj);
             }
         }
 
-        public object Import(string fileName)
+        public async Task<object> Import(string fileName)
         {
-            string value = File.ReadAllText(fileName);
-            return JsonConvert.DeserializeObject(value);
+            string serializedObj;
+            using (StreamReader reader = File.OpenText(fileName))
+            {
+                serializedObj = await reader.ReadToEndAsync();
+            }
+            
+            return JsonConvert.DeserializeObject(serializedObj);
         }
     }
 }

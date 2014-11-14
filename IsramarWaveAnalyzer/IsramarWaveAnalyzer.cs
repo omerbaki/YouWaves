@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ForecastAnalysisResult;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,7 @@ namespace IsramarWaveAnalyzer
 
         protected override WaveAnalysisResult CreateImageAnalysisResult()
         {
-            return new IsramarImageAnalysisResult();
+            return new IsramarWaveAnalysisResult();
         }
 
         public override bool ShouldRun()

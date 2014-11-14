@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WaveAnalyzerCommon.Model
+namespace ForecastAnalysisResult
 {
     public abstract class WaveAnalysisResult
     {
@@ -16,6 +16,6 @@ namespace WaveAnalyzerCommon.Model
 
         public DateTime CreatedAt { get { return mCreatedAt; } }
 
-        public abstract void Update(float markedPixelsPercentage, string imagePath);        
+        public abstract void Update(float markedPixelsPercentage, string imagePath);
     }
 }

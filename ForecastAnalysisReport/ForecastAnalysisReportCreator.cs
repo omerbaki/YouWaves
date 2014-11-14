@@ -51,8 +51,8 @@ namespace ForecastAnalysisReport
 
                     var waveAnalysisResult = await waveAnalyzer.Analyze();
 
-                    string reportFileName = 
-                        Path.Combine(directory, waveAnalyzer.GetType().Name + "_" + DateTime.Now.ToString("yyyyMMdd_HHmm") + ".json");
+                    string reportFileName =
+                        Path.Combine(directory, waveAnalysisResult.GetType().Name + "_" + DateTime.Now.ToString("yyyyMMdd_HHmm") + ".json");
 
                     await mJsonSerializer.Export(reportFileName, waveAnalysisResult);
                 }

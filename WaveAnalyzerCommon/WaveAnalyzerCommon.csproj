@@ -52,13 +52,18 @@
     <Compile Include="ImageAnalyzer.cs" />
     <Compile Include="ImageDownloader.cs" />
     <Compile Include="Model\DownloadImageModel.cs" />
-    <Compile Include="Model\ImageAnalysisResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WaveAnalyzerBase.cs" />
     <Compile Include="WaveAnalyzerCommonExtendedContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ForecastAnalysisResult\ForecastAnalysisResult.csproj">
+      <Project>{b775f481-1b0d-4f39-9095-a59b994a23d4}</Project>
+      <Name>ForecastAnalysisResult</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

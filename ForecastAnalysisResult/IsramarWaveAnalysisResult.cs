@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Drawing;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Security.AccessControl;
-using WaveAnalyzerCommon.Model;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace IsramarWaveAnalyzer
+namespace ForecastAnalysisResult
 {
-    public class IsramarImageAnalysisResult : WaveAnalysisResult
+    public class IsramarWaveAnalysisResult : WaveAnalysisResult
     {
         public string StartDate { get; set; }
         public string EndDate { get; set; }

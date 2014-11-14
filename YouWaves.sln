@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaveAnalyzerCommon", "WaveA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForecastNotification", "ForecastNotification", "{F9BB0E50-F149-416C-99E2-4D3EBD56D706}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastAnlysisNotificationCreator", "ForecastAnlysisNotificationCreator\ForecastAnlysisNotificationCreator.csproj", "{1A0B05AC-FA4C-49C1-A87F-6AE51217A7FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastAnalysisResult", "ForecastAnalysisResult\ForecastAnalysisResult.csproj", "{B775F481-1B0D-4F39-9095-A59B994A23D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +57,14 @@ Global
 		{042D3990-5DB5-46EB-8F85-9D0D4A95FA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{042D3990-5DB5-46EB-8F85-9D0D4A95FA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{042D3990-5DB5-46EB-8F85-9D0D4A95FA43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A0B05AC-FA4C-49C1-A87F-6AE51217A7FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A0B05AC-FA4C-49C1-A87F-6AE51217A7FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A0B05AC-FA4C-49C1-A87F-6AE51217A7FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A0B05AC-FA4C-49C1-A87F-6AE51217A7FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B775F481-1B0D-4F39-9095-A59B994A23D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B775F481-1B0D-4F39-9095-A59B994A23D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B775F481-1B0D-4F39-9095-A59B994A23D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B775F481-1B0D-4F39-9095-A59B994A23D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,5 +77,6 @@ Global
 		{6E450B02-E4E8-45FB-9CF3-67CABE8B3F3C} = {A1E3E5E8-125F-4D73-8E07-D5D24A2C671B}
 		{EADFAF2C-D9B3-430D-85A8-F2DF7A0B367A} = {C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}
 		{042D3990-5DB5-46EB-8F85-9D0D4A95FA43} = {C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}
+		{1A0B05AC-FA4C-49C1-A87F-6AE51217A7FE} = {F9BB0E50-F149-416C-99E2-4D3EBD56D706}
 	EndGlobalSection
 EndGlobal
