@@ -23,11 +23,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaveAnalyzerCommon", "WaveA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForecastNotification", "ForecastNotification", "{F9BB0E50-F149-416C-99E2-4D3EBD56D706}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastAnlysisNotificationCreator", "ForecastAnlysisNotificationCreator\ForecastAnlysisNotificationCreator.csproj", "{1A0B05AC-FA4C-49C1-A87F-6AE51217A7FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastAnalysisNotificationCreator", "ForecastAnlysisNotificationCreator\ForecastAnalysisNotificationCreator.csproj", "{1A0B05AC-FA4C-49C1-A87F-6AE51217A7FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastAnalysisResultEntities", "ForecastAnalysisResult\ForecastAnalysisResultEntities.csproj", "{B775F481-1B0D-4F39-9095-A59B994A23D4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastNotificaitonEntities", "ForecastNotificaitonEntities\ForecastNotificaitonEntities.csproj", "{C3E1120B-0102-4D44-862E-0C78C8454257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForecastAnalysisNotificationRunner", "ForecastAnalysisNotificationRunner\ForecastAnalysisNotificationRunner.csproj", "{ED2D5C94-7741-41BA-9593-7BC6B520D12E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,10 @@ Global
 		{C3E1120B-0102-4D44-862E-0C78C8454257}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3E1120B-0102-4D44-862E-0C78C8454257}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3E1120B-0102-4D44-862E-0C78C8454257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED2D5C94-7741-41BA-9593-7BC6B520D12E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED2D5C94-7741-41BA-9593-7BC6B520D12E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED2D5C94-7741-41BA-9593-7BC6B520D12E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED2D5C94-7741-41BA-9593-7BC6B520D12E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,5 +91,6 @@ Global
 		{042D3990-5DB5-46EB-8F85-9D0D4A95FA43} = {C52A759F-DBA6-4CFD-B50A-EA87586D0AC5}
 		{1A0B05AC-FA4C-49C1-A87F-6AE51217A7FE} = {F9BB0E50-F149-416C-99E2-4D3EBD56D706}
 		{C3E1120B-0102-4D44-862E-0C78C8454257} = {F9BB0E50-F149-416C-99E2-4D3EBD56D706}
+		{ED2D5C94-7741-41BA-9593-7BC6B520D12E} = {F9BB0E50-F149-416C-99E2-4D3EBD56D706}
 	EndGlobalSection
 EndGlobal

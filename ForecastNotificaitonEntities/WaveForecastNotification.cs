@@ -8,8 +8,8 @@ namespace ForecastNotificaitonEntities
 {
     public class WaveForecastNotification
     {
-        public string IsramarStartDate { get; set; }
+        public DateTime IsramarStartDate { get; set; }
 
-        public string IsramarEndDate { get; set; }
+        public DateTime IsramarEndDate { get; set; }
     }
 }
