@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ForecastAnalysisResultEntities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,11 @@ namespace LevYamWaveAnalyzer.Ben
             IWindAlertBenImageAnalyzer imageAnalyzer)
             : base(imageDownloader, imageAnalyzer)
         {
-        }       
+        }
+
+        protected override WaveAnalysisResult CreateImageAnalysisResult()
+        {
+            return new WindAlertBenWaveAnalysisResult();
+        }
     }
 }

@@ -7,8 +7,8 @@
     <ProjectGuid>{B775F481-1B0D-4F39-9095-A59B994A23D4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ForecastAnalysisResult</RootNamespace>
-    <AssemblyName>ForecastAnalysisResult</AssemblyName>
+    <RootNamespace>ForecastAnalysisResultEntities</RootNamespace>
+    <AssemblyName>ForecastAnalysisResultEntities</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,6 +42,8 @@
     <Compile Include="IsramarWaveAnalysisResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WaveAnalysisResult.cs" />
+    <Compile Include="WindAlertBenWaveAnalysisResult.cs" />
+    <Compile Include="WindAlertLevWaveAnalysisResult.cs" />
     <Compile Include="WindAlertWaveAnalysisResult.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

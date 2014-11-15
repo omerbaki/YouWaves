@@ -65,9 +65,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ForecastAnalysisResult\ForecastAnalysisResult.csproj">
+    <ProjectReference Include="..\ForecastAnalysisResult\ForecastAnalysisResultEntities.csproj">
       <Project>{b775f481-1b0d-4f39-9095-a59b994a23d4}</Project>
-      <Name>ForecastAnalysisResult</Name>
+      <Name>ForecastAnalysisResultEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\WaveAnalyzerCommon\WaveAnalyzerCommon.csproj">
       <Project>{042d3990-5db5-46eb-8f85-9d0d4a95fa43}</Project>

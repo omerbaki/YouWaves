@@ -1,25 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ForecastAnalysisResult
+namespace ForecastAnalysisResultEntities
 {
     public class IsramarWaveAnalysisResult : WaveAnalysisResult
     {
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
 
         public override void Update(float markedPixelsPercentage, string imagePath)
         {
-            if (markedPixelsPercentage >= 0.9f && string.IsNullOrEmpty(StartDate))
+            if (markedPixelsPercentage >= 0.85f && StartDate == DateTime.MinValue)
             {
-                StartDate = imagePath;
+                string dateFromFileName = Path.GetFileNameWithoutExtension(imagePath).Replace("isramar.", "");
+                StartDate = DateTime.ParseExact(dateFromFileName, "yyMMddHH", CultureInfo.InvariantCulture);
             }
-            else if (markedPixelsPercentage < 0.9 && !string.IsNullOrEmpty(StartDate) && string.IsNullOrEmpty(EndDate))
+            else if (markedPixelsPercentage < 0.5 && StartDate > DateTime.MinValue && EndDate == DateTime.MinValue)
             {
-                EndDate = imagePath;                
+                string dateFromFileName = Path.GetFileNameWithoutExtension(imagePath).Replace("isramar.", "");
+                EndDate = DateTime.ParseExact(dateFromFileName, "yyMMddHH", CultureInfo.InvariantCulture);          
             }
         }        
     }

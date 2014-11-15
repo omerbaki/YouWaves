@@ -1,4 +1,4 @@
-﻿using ForecastAnalysisResult;
+﻿using ForecastAnalysisResultEntities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,12 +17,7 @@ namespace LevYamWaveAnalyzer
         public WindAlertWaveAnalyzerBase(IImageDownloader imageDownloader, IImageAnalyzer imageAnalyzer) : 
             base(imageDownloader, imageAnalyzer)
         { 
-        }
-
-        protected override WaveAnalysisResult CreateImageAnalysisResult()
-        {
-            return new WindAlertWaveAnalysisResult();
-        }
+        }        
 
         public override bool ShouldRun()
         {

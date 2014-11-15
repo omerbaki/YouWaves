@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ForecastAnalysisResult
+namespace ForecastAnalysisResultEntities
 {
-    public class WindAlertWaveAnalysisResult : WaveAnalysisResult
+    public abstract class WindAlertWaveAnalysisResult : WaveAnalysisResult
     {
         public float MarkedPixelsPercentage { get; set; }
 
