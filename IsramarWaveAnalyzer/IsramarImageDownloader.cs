@@ -22,7 +22,7 @@ namespace IsramarWaveAnalyzer
             // Today format for URL - 1411110000
             string todayFormat = DateTime.Today.ToString("yyMMddHHmm");
 
-            DateTime currentDate = DateTime.Today;
+            DateTime currentDate = GetStartingDate();
             var imageModels = new List<DownloadImageModel>();
             for (int i = 0; i < 24; i++)
             {
@@ -39,6 +39,11 @@ namespace IsramarWaveAnalyzer
             }
 
             return imageModels.ToArray();
+        }
+
+        private DateTime GetStartingDate()
+        {
+            return DateTime.Today.AddDays(1);
         }
 
         protected override string GetDownloaderName()

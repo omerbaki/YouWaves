@@ -64,6 +64,10 @@
       <Project>{1a0b05ac-fa4c-49c1-a87f-6ae51217a7fe}</Project>
       <Name>ForecastAnalysisNotificationCreator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ForecastNotificationSender\ForecastNotificationSender.csproj">
+      <Project>{891d89fa-08e3-4ed4-b413-34742bd88c6b}</Project>
+      <Name>ForecastNotificationSender</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Framework\Framework.csproj">
       <Project>{51a6a9ca-9a64-45fb-b649-69b00aebfa15}</Project>
       <Name>Framework</Name>

@@ -1,4 +1,5 @@
 ﻿using ForecastAnalysisNotificationCreator;
+using ForecastNotificationSender;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,18 +15,23 @@ namespace ForecastAnalysisNotificationRunner
 
     class ForecastAnalysisNotificationRunner : IForecastAnalysisNotificationRunner
     {
-        private IWaveForecastNotificationCreator mWaveForecastNotificationCreator;
+        private readonly IWaveForecastNotificationCreator mWaveForecastNotificationCreator;
+        private readonly IEmailSender mEmailSender;
 
-        public ForecastAnalysisNotificationRunner(IWaveForecastNotificationCreator aWaveForecastNotificationCreator)
+        public ForecastAnalysisNotificationRunner(
+            IWaveForecastNotificationCreator aWaveForecastNotificationCreator,
+            IEmailSender emailSender)
         {
             mWaveForecastNotificationCreator = aWaveForecastNotificationCreator;
+            mEmailSender = emailSender;
         }
 
         public void Start()
         {
             try
             {
-                mWaveForecastNotificationCreator.CreateNotification();
+                //mWaveForecastNotificationCreator.CreateNotification();
+                mEmailSender.Send();
             }
             catch(Exception ex)
             {

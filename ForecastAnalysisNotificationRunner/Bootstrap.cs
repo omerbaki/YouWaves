@@ -1,4 +1,5 @@
 ﻿using ForecastAnalysisNotificationCreator;
+using ForecastNotificationSender;
 using Framework;
 using Microsoft.Practices.Unity;
 using System;
@@ -17,6 +18,7 @@ namespace ForecastAnalysisNotificationRunner
 
             container.AddNewExtension<FrameworkExtendedContainer>();
             container.AddNewExtension<ForecastAnlysisNotificationCreatorExtendedContainer>();
+            container.AddNewExtension<ForecastNotificationSenderExtendedContainer>();
 
             container.RegisterType<IForecastAnalysisNotificationRunner, ForecastAnalysisNotificationRunner>();
 
